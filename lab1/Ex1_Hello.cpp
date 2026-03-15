@@ -18,7 +18,7 @@ void printPerson(Person p){
 int main()
 {
     Person p1 = {"Caro", 20, 'M', "Software Engineering"};
-    Person p2 = {"Lyda", 20, 'F', "Software Engineering"};
+    Person p2 = {"Lyda", 23, 'F', "Software Engineering"};
     Person p3;
 
     std::cout << "Your name: ";
