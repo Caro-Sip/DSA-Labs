@@ -11,8 +11,11 @@ struct Person
 void printPerson(Person p){
     std::string title = (p.gender == 'M' || p.gender == 'm') ? "Mr. " : "Ms. ";
 
-    std::cout << "Hi, " << title << p.name << "! your age is age year old and you learn " << 
+    std::cout << "Hi, " << title << p.name << "! your age is " << p.age << " year old and you learn " << 
     p.major << "!" << std::endl;
+    
+    (p.age >= 18) ? std::cout << "You are eligible to vote!" : std::cout << "You are not eligible to vote!";
+    std::cout << std::endl;
 }
 
 int main()
