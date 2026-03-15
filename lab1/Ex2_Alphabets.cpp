@@ -17,18 +17,20 @@ bool isConsonant(char c){
 }
 
 int main(){
-    char c;
-    std::cout << "Enter one singular character: ";
-    std::cin >> c;
-
-    if(isVowel(c)){
-        std::cout << c << " is a vowel\n";
-    }
-    else if(isConsonant(c)){
-        std::cout << c << " is a consonant\n";
-    }
-    else{
-        std::cout << c << " is non-alphabetical\n";
+    
+    while(true){
+        char c;
+        std::cout << "Enter one singular character: ";
+        std::cin >> c;
+        if(isVowel(c)){
+            std::cout << c << " is a vowel\n";
+        }
+        else if(isConsonant(c)){
+            std::cout << c << " is a consonant\n";
+        }
+        else{
+            std::cout << c << " is non-alphabetical\n";
+        }
     }
 
     return 0;
