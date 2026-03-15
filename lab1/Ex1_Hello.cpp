@@ -33,6 +33,7 @@ int main()
 
     std::cout << "Your gender(M or F): ";
     std::cin >> p3.gender;
+    p3.gender = tolower(p3.gender);
     std::cin.ignore();  // Clear the newline
 
     std::cout << "Your major: ";
@@ -42,4 +43,6 @@ int main()
     printPerson(p1);
     printPerson(p2);
     printPerson(p3);
+
+    return 0;
 }
