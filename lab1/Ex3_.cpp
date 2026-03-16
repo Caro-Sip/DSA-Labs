@@ -1,6 +1,5 @@
 #include <iostream>
 
-
 struct Person{
     std::string name;
     uint8_t age;
@@ -10,34 +9,18 @@ struct Person{
 
 double calculateTax(Person p){
     if (p.gender == 'm'){
-        if (p.salary < 300){
-            return p.salary*0;
-        }
-        else if (p.salary >= 300 && p.salary < 500){
-            return p.salary*0.035;
-        }
-        else if (p.salary >= 500 && p.salary < 1000){
-            return p.salary*0.07;
-        }
-        else if (p.salary >= 1000){
-            return p.salary*0.095;
-        }
+        if (p.salary < 300) return p.salary*0;
+        else if (p.salary >= 300 && p.salary < 500) return p.salary*0.035;
+        else if (p.salary >= 500 && p.salary < 1000) return p.salary*0.07;
+        else return p.salary*0.095;
     }
     else if (p.gender == 'f'){
-        if (p.salary < 300){
-            return p.salary*0;
-        }
-        else if (p.salary >= 300 && p.salary < 500){
-            return p.salary*0.035;
-        }
-        else if (p.salary >= 500 && p.salary < 1000){
-            return p.salary*0.065;
-        }
-        else if (p.salary >= 1000){
-            return p.salary*0.08;
-        }
+        if (p.salary < 300) return p.salary*0;
+        else if (p.salary >= 300 && p.salary < 500) return p.salary*0.035;
+        else if (p.salary >= 500 && p.salary < 1000) return p.salary*0.065;
+        else return p.salary*0.08;
     }
-    return 0;
+    return 0.0;
 }
 
 void printGrossSalary(Person p){
