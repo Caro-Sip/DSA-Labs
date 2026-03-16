@@ -37,7 +37,6 @@ int main()
     std::cin.ignore();  // Clear the newline
 
     std::cout << "Your major: ";
-    std::cin >> p3.major;
     std::getline(std::cin, p3.major);
 
     printPerson(p1);
