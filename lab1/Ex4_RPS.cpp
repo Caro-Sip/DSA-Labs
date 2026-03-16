@@ -21,7 +21,7 @@ void printHand(int hand){
     return;
 }
 
-int8_t isWin(uint8_t p, uint8_t b){
+int isWin(int p, int b){
     if (p == b){
         return 0;
     }
@@ -37,7 +37,7 @@ int8_t isWin(uint8_t p, uint8_t b){
 int main(){
     while(true){
         srand(time(0));
-        uint8_t botAnswer = rand()% 3;
+        int botAnswer = rand()% 3;
         int pAnswer = 0;
 
         std::cout << "[0] rock\n";
