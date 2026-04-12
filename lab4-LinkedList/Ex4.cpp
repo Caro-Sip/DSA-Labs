@@ -47,6 +47,24 @@ void add(Student s, ListStudent *ls){
     }
 }
 
+void printStudent(Student s){
+    std::cout << s.id << " " << s.name << " " << s.year << " " << s.program << "\n";
+}
+
+// Recursion
+// void printAllStudents(const Node *node){
+//     if(node == nullptr) return;
+//     printStudent(node->student);
+//     printAllStudents(node->next);
+// }
+
+void printAllStudents(const Node* node){
+    while (node != nullptr){
+        printStudent(node->student);
+        node = node->next;
+    }
+}
+
 void destroyList(ListStudent*& ls){
     if (ls == nullptr) return;
 
@@ -76,5 +94,6 @@ int main(){
     add(s4,ls);
     add(s5,ls);
     
+    printAllStudents(ls->head);
     destroyList(ls);
 }
