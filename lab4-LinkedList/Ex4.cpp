@@ -66,9 +66,12 @@ void printAllStudents(const Node* node){
 }
 
 void destroyList(ListStudent*& ls){
+    // check if list pointer is pointing to anything;
     if (ls == nullptr) return;
-
+    
     Node* current = ls->head;
+    // Case of linked list for the last node to have a null pointer;
+    // Delete all nodes objects that exist in the heap one by one;
     while (current != nullptr){
         Node* next = current->next;
         delete current;
@@ -94,6 +97,15 @@ int main(){
     add(s4,ls);
     add(s5,ls);
     
+    std::cout << "=== Added 5 ===\n";
+    printAllStudents(ls->head);
+    Student s6 = {666,"Vanheng",2,"SE"};
+    Student s7 = {777,"Lyda",2,"SE"};
+
+    add(s6,ls);
+    add(s7,ls);
+
+    std::cout << "=== Added 2 ===\n";
     printAllStudents(ls->head);
     destroyList(ls);
 }
