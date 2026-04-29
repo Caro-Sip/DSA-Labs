@@ -43,7 +43,7 @@ void addPerson(List *ls, char data){
 void displayAllData(const Element *node){
     int counter = 0;
     while(node != nullptr){
-        std::cout << "Element #" << counter + 1 << node->data << '\n';
+        std::cout << "Element #" << counter + 1 << " " << node->data << '\n';
         node = node->next;
         counter++;
     }
