@@ -160,14 +160,13 @@ void updateByProductId(ListProduct* ls, int pid, Product p){
     Element* e = ls->head;
     while(e != nullptr){
         if(e->product.productId == pid){
-            std::cout << "Product Found\n";
-            std::cout << e->product.name << '\n';
-            std::cout << e->product.price << '\n';
-            std::cout << e->product.productId << '\n';
-            std::cout << "---\n";
-            e = e->next;
+            e->product = p;
+            std::cout << "Updated product\n";
+            return;
         }
+        e = e->next;
     }
+    std::cout << "Product ID not found\n";
     return;   
 }
 
@@ -194,6 +193,11 @@ int main(){
 
     searchByName(ls, "coca");
     searchByPrice(ls, 30);
+
+    updateByProductId(ls,111,(Product){676, "Brainrot", 92});
+
+    std::cout << "\n\n printing list after update\n";
+    display(ls);
 
     return 0;
 }
