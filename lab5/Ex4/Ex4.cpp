@@ -194,7 +194,7 @@ int main(){
     searchByName(ls, "coca");
     searchByPrice(ls, 30);
 
-    updateByProductId(ls,111,(Product){676, "Brainrot", 92});
+    updateByProductId(ls, 111, {676, "Brainrot", 92});
 
     std::cout << "\n\n printing list after update\n";
     display(ls);
