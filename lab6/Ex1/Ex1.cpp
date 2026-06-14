@@ -106,11 +106,13 @@ void addPos(List* ls, int pos, int data){
     node->next = current->next;
 
     current->next = node;
-    current->next->prev = node;
+    if(node->next != nullptr) // fix: set successor's prev to the new node
+        node->next->prev = node;
     ls->n++;
 }
 
 void display(List* ls){
+    if(ls == nullptr) return;
     Node* n = ls->head;
     while(n != nullptr){
         std::cout << n->data << '\n';
